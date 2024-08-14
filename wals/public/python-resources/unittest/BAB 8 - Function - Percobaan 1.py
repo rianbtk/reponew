@@ -19,17 +19,31 @@ def run_tests():
     script_path = Path(__file__).parent.absolute() / f"jawaban/{filename}.py"
     cmd = subprocess.run([sys.executable, str(script_path)], capture_output=True)
 
-    @codewars_test.describe('BAB 1')
-    def percobaan1():
-        @codewars_test.it('|Test Output Indonesia-')
-        def test_indonesia():
-            actual_output = result.stdout.strip()
-            expected_output = "10 anak"
-    
-            try:
-                codewars_test.assert_equals(actual_output, expected_output, 'Error: Output tidak sesuai!')
-            except AttributeError as e:
-                print(e)
+    # Menyimpan output dan error
+    output = cmd.stdout.decode()
+    error = cmd.stderr.decode()
+
+    if cmd.returncode != 0:
+        print(f"Error running script: {error}")
+        sys.exit(1)
+
+    @codewars_test.describe('BAB 8')
+    def test():
+        import io
+        import sys
+
+        # Capture the output
+        captured_output = io.StringIO()
+        sys.stdout = captured_output
+
+        # Menjalankan fungsi dari modul yang diimpor
+        pc.hitung_luas_segitiga()
+        
+        # Memastikan output sesuai dengan harapan
+        assert captured_output.getvalue() == "Luas Segitiga adalah:  17.5\n"
+
+        # Reset stdout
+        sys.stdout = sys.__stdout__
 
 if __name__ == '__main__':
-    run_tests()
+    codewars_test

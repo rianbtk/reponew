@@ -1,6 +1,7 @@
 /node_modules
 /storage/*.key
 /vendor
+/public/AdminLTE
 .env.backup
 .phpunit.result.cache
 Homestead.json
