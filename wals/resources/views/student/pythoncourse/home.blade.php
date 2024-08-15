@@ -41,6 +41,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     @if (isset($count))
     @if ($count==0)
     <div class="content">
+
     </div>
     @endif
     @endif

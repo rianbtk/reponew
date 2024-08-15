@@ -1,0 +1,1 @@
+print("Politeknik Negeri Malang")
