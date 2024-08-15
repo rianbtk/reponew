@@ -41,7 +41,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
     @if (isset($count))
     @if ($count==0)
     <div class="content">
-
+    <section class="courses">
+        <div class="container">
+            <div class="course-grid">
+                <div class="course-item">
+                  <center></center>
+                  <img src="{{asset('logo.png')}}" alt="Course Image" style="width: 800px; height: 1000px;">
+                </div>
+                <!-- Tambahkan kursus lain sesuai kebutuhan -->
+            </div>
+        </div>
+    </section>
     </div>
     @endif
     @endif
