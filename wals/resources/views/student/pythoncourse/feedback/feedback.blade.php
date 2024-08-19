@@ -50,25 +50,31 @@
 
                     <div class="col-md-6">
 
-                        {{-- <div class="form-group">
+                        <div class="form-group">
                             <label for="">Durasi (menit)</label>
                             <input type="number" name="durasi" class="form-control" placeholder="Masukkan estimasi durasi pengerjaan . . ." required="" />
                             <small>Berisi estimasi durasi pengerjaan percobaan {{$percobaan->no_percobaan.' : '.$percobaan->nama_percobaan}}</small>
-                        </div> --}}
-                        {{-- <div class="form-group">
+                        </div>
+                        <div class="form-group">
                             <label>Tingkatan Kesulitan Percobaan</label>
                             <select class="form-control" name="tingkatan">
                                 <option value="mudah">Mudah</option>
                                 <option value="sulit">Sulit</option>
                             </select>
 
-                        </div> --}}
+                        </div>
                         <div cslass="form-group">
                             <label for="">Komentar </label>
                             <textarea name="komentar" class="form-control" placeholder="Berikan feedback dari topik yang sudah disediakan" required=""></textarea>
                             <small>Berisi pendapat mahasiswa mengenai topik pembelajaran yang dikerjakan -> Contoh : Saya bisa menyelesaikan topik ini / Materi kurang jelas </small>
                             <small></small>
                         </div>
+                        <!-- <div cslass="form-group">
+                            <label for="">Komentar </label>
+                            <textarea name="waktu" class="form-control" placeholder="Berikan estimasi waktu pengerjaan" required=""></textarea>
+                            <small>Berisi pendapat mahasiswa mengenai waktu pengerjaan </small>
+                            <small></small>
+                        </div> -->
 
 
                         {{-- <input type="hidden" name="id_topik" value="{{ $id_topik }}" >

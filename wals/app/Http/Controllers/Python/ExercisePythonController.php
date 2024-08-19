@@ -402,6 +402,8 @@ class ExercisePythonController extends Controller
 
         $id_topik = $request->id_topik;
         $id_percobaan = $request->id_percobaan;
+        $durasi = $request->durasi;
+        $tingkatan = $request->tingkatan;
         $komentar = $request->komentar;
 
         $data = array(
@@ -409,7 +411,10 @@ class ExercisePythonController extends Controller
             'userid' => Auth::id(),
             'id_topik' => $id_topik,
             'id_percobaan' => $id_percobaan,
+            'durasi' => $durasi,
+            'tingkatan' => $tingkatan,
             'comment' => $komentar,
+
         );
 
         // eksekusi insert
